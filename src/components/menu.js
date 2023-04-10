@@ -12,7 +12,7 @@ class Menu extends Component {
                 &nbsp;
                 <button className="menuButton" type="submit" formaction="/SecondPage"> Second Page </button>
                 &nbsp;
-                <button className="menuButton" type="submit" formaction="/SecondPage"> Second Page </button>
+                <button className="menuButton" type="submit"> thing </button>
                 </form>
                 </div> 
 
