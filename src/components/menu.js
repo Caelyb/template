@@ -8,9 +8,9 @@ class Menu extends Component {
             <h3 style={{fontWeight:'bold' , color:'black'}}>Main Menu</h3>
 
                 <form>
-                <button className="menuButton" type="submit" formaction="https://github.com/Caelyb/Template-React-App">Github Repo</button>
+                <button className="menuButton" type="submit" formAction="https://github.com/Caelyb/template">Github Repo</button>
                 &nbsp;
-                <button className="menuButton" type="submit" formaction="/SecondPage"> Second Page </button>
+                <button className="menuButton" type="submit" formAction="/ItemGrid"> Item Grid </button>
                 &nbsp;
                 <button className="menuButton" type="submit"> thing </button>
                 </form>
