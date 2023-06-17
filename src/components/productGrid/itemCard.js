@@ -1,7 +1,9 @@
-import React, { useState } from "react";
-import "./itemGrid.css";
+import React, { useState } from 'react';
+import './itemGrid.css';
 
-function ItemCard({ title, imageSrc, date, price }) {
+function ItemCard({
+  title, imageSrc, date, price,
+}) {
   const [isPurchased, setIsPurchased] = useState(false);
 
   const handleButtonClick = () => {
@@ -10,17 +12,23 @@ function ItemCard({ title, imageSrc, date, price }) {
 
   return (
     <div className="item-card">
-        <div className="image-container">
+      <div className="image-container">
         <img src={imageSrc} alt={title} className="item-image" />
-        </div>
+      </div>
       <div className="item-content">
         <div className="item-details">
           <h3 className="item-title">{title}</h3>
-          <p className="item-date">Available from: {date}</p>
-          <p className="item-price">Credits: {price}</p>
+          <p className="item-date">
+            Available from:
+            {date}
+          </p>
+          <p className="item-price">
+            Credits:
+            {price}
+          </p>
         </div>
         <button className="button1" onClick={handleButtonClick}>
-          {isPurchased ? "Purchased" : "Purchase"}
+          {isPurchased ? 'Purchased' : 'Purchase'}
         </button>
       </div>
     </div>

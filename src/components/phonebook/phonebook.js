@@ -1,35 +1,35 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 const style = {
   table: {
-    borderCollapse: "collapse",
+    borderCollapse: 'collapse',
   },
   tableCell: {
-    border: "1px solid gray",
+    border: '1px solid gray',
     margin: 0,
-    padding: "5px 10px",
-    width: "max-content",
-    minWidth: "150px",
+    padding: '5px 10px',
+    width: 'max-content',
+    minWidth: '150px',
   },
   form: {
     container: {
-      padding: "20px",
-      border: "1px solid #F0F8FF",
-      borderRadius: "15px",
-      width: "max-content",
-      marginBottom: "40px",
+      padding: '20px',
+      border: '1px solid #F0F8FF',
+      borderRadius: '15px',
+      width: 'max-content',
+      marginBottom: '40px',
     },
     inputs: {
-      marginBottom: "5px",
+      marginBottom: '5px',
     },
     submitBtn: {
-      marginTop: "10px",
-      padding: "10px 15px",
-      border: "none",
-      backgroundColor: "lightseagreen",
-      fontSize: "14px",
-      borderRadius: "5px",
+      marginTop: '10px',
+      padding: '10px 15px',
+      border: 'none',
+      backgroundColor: 'lightseagreen',
+      fontSize: '14px',
+      borderRadius: '5px',
     },
   },
 };
@@ -37,9 +37,9 @@ const style = {
 function PhoneBookForm(props) {
   const initContact = {
     id: null,
-    userFirstname: "Coder",
-    userLastname: "Byte",
-    userPhone: "8885559999",
+    userFirstname: 'Coder',
+    userLastname: 'Byte',
+    userPhone: '8885559999',
   };
 
   const [userState, setUserState] = useState(initContact);
@@ -80,20 +80,19 @@ function PhoneBookForm(props) {
 function InformationTable(props) {
   const sortedContacts = props.users.sort((a, b) => a.userLastname.localeCompare(b.userLastname));
 
-  const display =
-    sortedContacts.length > 0 ? (
-      sortedContacts.map((user, index) => (
-        <tr key={index}>
-          <td style={style.tableCell}>{user.userFirstname}</td>
-          <td style={style.tableCell}>{user.userLastname}</td>
-          <td style={style.tableCell}>{user.userPhone}</td>
-        </tr>
-      ))
-    ) : (
-      <tr>
-        <td colSpan={3}>&nbsp;</td>
+  const display = sortedContacts.length > 0 ? (
+    sortedContacts.map((user, index) => (
+      <tr key={index}>
+        <td style={style.tableCell}>{user.userFirstname}</td>
+        <td style={style.tableCell}>{user.userLastname}</td>
+        <td style={style.tableCell}>{user.userPhone}</td>
       </tr>
-    );
+    ))
+  ) : (
+    <tr>
+      <td colSpan={3}>&nbsp;</td>
+    </tr>
+  );
 
   return (
     <table style={style.table} className="informationTable">
@@ -127,4 +126,4 @@ function Application(props) {
   );
 }
 
-export default Application
+export default Application;
