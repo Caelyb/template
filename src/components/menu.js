@@ -12,7 +12,11 @@ class Menu extends Component {
                 &nbsp;
                 <button className="menuButton" type="submit" formAction="/ItemGrid"> Item Grid </button>
                 &nbsp;
-                <button className="menuButton" type="submit"> thing </button>
+                <button className="menuButton" type="submit" formAction="/Phonebook"> Phonebook </button>
+                &nbsp;
+                <button className="menuButton" type="submit" formAction="/Counter"> Counter </button>
+                &nbsp;
+                <button className="menuButton" type="submit" formAction="/Component"> Component Template </button>
                 </form>
                 </div> 
 

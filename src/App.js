@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import ItemGrid from './components/itemGrid';
+import ItemGrid from './components/productGrid/itemGrid';
 import Menu from './components/menu';
+import Phonebook from './components/phonebook/phonebook'
+import Counter from './components/counter/counter';
+import BasicComponent from './components/BasicComponent/BasicComponent';
  
 function App() {
 
@@ -68,23 +71,19 @@ function App() {
     available: true,
     imgUrl: "https://media.istockphoto.com/id/1327919661/photo/world-earth-day-concept-green-energy-renewable-and-sustainable-resources-environmental-and.jpg?s=612x612&w=0&k=20&c=6PvLRMFPI65ATEs-XWPJ_UOtkmSKoONOD4h7Lohq850=" ,
     id: "8"
-  },
-  {
-    name: "item9",
-    start_date: "30/07/2023",
-    credits:"4000",
-    available: true,
-    imgUrl: "https://media.istockphoto.com/id/1327919661/photo/world-earth-day-concept-green-energy-renewable-and-sustainable-resources-environmental-and.jpg?s=612x612&w=0&k=20&c=6PvLRMFPI65ATEs-XWPJ_UOtkmSKoONOD4h7Lohq850=" ,
-    id: "9"
   }
   ]
 
+ // eslint-disable-next-line no-lone-blocks
  {
     return (      
        <BrowserRouter>
         <Routes>
               <Route path="/" element={<Menu/>}/>
               <Route path="/ItemGrid" element={<ItemGrid items={items} />}/>
+              <Route path="/Phonebook" element={<Phonebook/>}/>
+              <Route path="/Counter" element={<Counter/>}/>
+              <Route path="/Component" element={<BasicComponent/>}/>
         </Routes>
       </BrowserRouter>
     );
