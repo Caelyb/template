@@ -4,7 +4,7 @@ import ItemGrid from './components/productGrid/itemGrid';
 import Menu from './components/menu';
 import Phonebook from './components/phonebook/phonebook'
 import Counter from './components/counter/counter';
-import BasicComponent from './components/BasicComponent/BasicComponent';
+import BasicComponent from './components/basicComponent/basicComponent';
  
 function App() {
 
