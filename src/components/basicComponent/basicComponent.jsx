@@ -3,8 +3,8 @@ import React from 'react';
 
 function BasicComponent() {
   return (
-    <body className="cBody">
-      <div className="card">
+    <body className="Body">
+      <div className="card1">
       </div>
     </body>
   );

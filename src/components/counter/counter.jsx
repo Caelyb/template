@@ -1,5 +1,6 @@
 /* eslint-disable react/button-has-type */
 import { React, useState } from 'react';
+import { ButtonGroup } from 'react-bootstrap';
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -13,19 +14,45 @@ function Counter() {
   const handleDouble = () => {
     setCount(count * 2);
   };
+  const handleReset = () => {
+    setCount(count * 0);
+  };
 
   return (
-    <body className="cBody">
-      <div className="card">
-        <h1>
+    <body className="Body">
+      <div className="card1">
+        <h3 style={{
+          display: 'flex', justifyContent: 'center', alignItems: 'center',
+        }}
+        >
           {' '}
-          {count}
+          Counter
           {' '}
-        </h1>
-        <div className="btn-group">
-          <button className="button1" onClick={handleIncrement}> + </button>
+
+        </h3>
+        <div
+          style={{
+            display: 'flex', justifyContent: 'center', alignItems: 'center',
+          }}
+        >
+          <h1>
+            {' '}
+            {count}
+            {' '}
+          </h1>
+        </div>
+        <ButtonGroup>
           <button className="button3" onClick={handleDecrease}> - </button>
-          <button className="button2" onClick={handleDouble}> Double </button>
+          &nbsp;
+          <button className="button1" onClick={handleIncrement}> + </button>
+          &nbsp;
+        </ButtonGroup>
+        <div>
+          <ButtonGroup>
+            <button className="button2" onClick={handleDouble}> Double </button>
+          &nbsp;
+            <button className="button2" onClick={handleReset}> Reset </button>
+          </ButtonGroup>
         </div>
       </div>
     </body>

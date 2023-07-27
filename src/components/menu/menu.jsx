@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 class Menu extends Component {
   render() {
     return (
-      <body className="cBody">
+      <body className="Body">
         <div className="card2">
           <h3 style={{ fontWeight: 'bold', color: 'black' }}>Main Menu</h3>
 

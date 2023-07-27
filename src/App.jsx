@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemGrid from './components/productGrid/itemGrid';
-import Menu from './components/menu';
+import Menu from './components/menu/menu';
 import Phonebook from './components/phonebook/phonebook';
 import Counter from './components/counter/counter';
 import BasicComponent from './components/basicComponent/basicComponent';
+import MyNavbar from './components/navbar/navbar';
+import MySearchbar from './components/searchbar/searchbar';
 
 function App() {
   const items = [{
@@ -77,12 +79,14 @@ function App() {
   {
     return (
       <BrowserRouter>
+        <MyNavbar />
         <Routes>
           <Route path="/" element={<Menu />} />
           <Route path="/ItemGrid" element={<ItemGrid items={items} />} />
           <Route path="/Phonebook" element={<Phonebook />} />
           <Route path="/Counter" element={<Counter />} />
           <Route path="/Component" element={<BasicComponent />} />
+          <Route path="/SearchbarComponent" element={<MySearchbar />} />
         </Routes>
       </BrowserRouter>
     );

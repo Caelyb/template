@@ -9,7 +9,7 @@ import './phonebook.css';
 import InformationTable from './phonebook-Table';
 import PhoneBookForm from './phonebook-form';
 
-function Application(props) {
+function Phonebook(props) {
   const usersObj = [];
 
   const [users, setUsers] = useState(usersObj);
@@ -20,7 +20,7 @@ function Application(props) {
   };
 
   return (
-    <body className="cBody">
+    <body className="Body">
       <div style={{ width: 'max-content', height: 'max-content' }} className="card">
         <section>
           <PhoneBookForm addUser={addUser} />
@@ -31,4 +31,4 @@ function Application(props) {
   );
 }
 
-export default Application;
+export default Phonebook;
