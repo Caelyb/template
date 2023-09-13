@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-array-index-key */
@@ -10,13 +11,11 @@ import InformationTable from './phonebook-Table';
 import PhoneBookForm from './phonebook-form';
 
 function Phonebook(props) {
-  const usersObj = [];
-
-  const [users, setUsers] = useState(usersObj);
+  const [users, setUsers] = useState([]);
 
   const addUser = (user) => {
     user.id = users.length + 1;
-    setUsers([...users, user]);
+    setUsers([...users, user]); // all previous users plus new user
   };
 
   return (

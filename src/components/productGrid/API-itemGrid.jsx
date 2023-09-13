@@ -5,8 +5,9 @@
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable linebreak-style */
 import React, { useEffect, useState } from 'react';
+import './itemGrid.css';
 
-function Projects() {
+function ApiItemGrid() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -52,34 +53,36 @@ function Projects() {
     };
 
     return (
-      <div className="project-card">
-        <div className="image-container">
-          <img className="image" src={project.image} alt={project.name} />
-        </div>
-        <div className="container">
-          <div className="outline">
-            <h3>
-              {' '}
-              {capitalizeWords(project.name)}
-              {' '}
-            </h3>
-            <button className={`button ${isPurchased ? 'purchased' : 'purchase'}`} onClick={handleClick}>
-              {isPurchased ? 'Purchased' : 'Purchase'}
-            </button>
+      <body>
+        <div className="project-card">
+          <div className="image-container">
+            <img className="image" src={project.image} alt={project.name} />
           </div>
-          <div className="outline">
-            <p>
-              {' '}
-              {project.available_credits}
-              {' '}
-              credits
-              {' '}
-              <br />
-              {displayDate(project.start_date)}
-            </p>
+          <div className="container">
+            <div className="outline">
+              <h3>
+                {' '}
+                {capitalizeWords(project.name)}
+                {' '}
+              </h3>
+              <button className={`button ${isPurchased ? 'purchased' : 'purchase'}`} onClick={handleClick}>
+                {isPurchased ? 'Purchased' : 'Purchase'}
+              </button>
+            </div>
+            <div className="outline">
+              <p>
+                {' '}
+                {project.available_credits}
+                {' '}
+                credits
+                {' '}
+                <br />
+                {displayDate(project.start_date)}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </body>
     );
   }
 
@@ -99,4 +102,4 @@ function Projects() {
     </div>
   );
 }
-export default Projects;
+export default ApiItemGrid;

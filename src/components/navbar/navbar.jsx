@@ -16,11 +16,14 @@ function MyNavbar() {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/Component">About</Nav.Link>
-          <NavDropdown title="Services" id="services-dropdown">
-            <NavDropdown.Item href="Counter">Counter</NavDropdown.Item>
-            <NavDropdown.Item href="Phonebook">Phonebook</NavDropdown.Item>
-            <NavDropdown.Item href="ItemGrid">Product grid</NavDropdown.Item>
-            <NavDropdown.Item href="SearchbarComponent"> Search Page</NavDropdown.Item>
+          <NavDropdown title="Templates" id="services-dropdown">
+            <NavDropdown.Item href="/Counter"> Counter </NavDropdown.Item>
+            <NavDropdown.Item href="/Phonebook"> Phonebook </NavDropdown.Item>
+            <NavDropdown.Item href="/ItemGrid"> Product grid </NavDropdown.Item>
+            <NavDropdown.Item href="/Searchbar"> Search Page </NavDropdown.Item>
+            <NavDropdown.Item href="/DisplayBar"> Carousel </NavDropdown.Item>
+            <NavDropdown.Item href="/Test1Component"> Test1 </NavDropdown.Item>
+            <NavDropdown.Item href="/Test2Component"> Test2 </NavDropdown.Item>
           </NavDropdown>
         </Nav>
         <Form className="d-flex">

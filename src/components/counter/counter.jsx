@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/button-has-type */
 import { React, useState } from 'react';
 import { ButtonGroup } from 'react-bootstrap';

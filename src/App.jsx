@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemGrid from './components/productGrid/itemGrid';
@@ -7,8 +8,26 @@ import Counter from './components/counter/counter';
 import BasicComponent from './components/basicComponent/basicComponent';
 import MyNavbar from './components/navbar/navbar';
 import MySearchbar from './components/searchbar/searchbar';
+// import BasicBar from './components/searchbar/searchbarBasic';
+import Display from './components/carousel/carousel';
+import ApiItemGrid from './components/productGrid/API-itemGrid';
+import { Test1Component, Test2Component } from './components/test.tsx';
 
 function App() {
+  const data = [
+    {
+      name: 'Caelyb',
+      age: 26,
+    },
+    {
+      name: 'Cassi',
+      age: 26,
+    },
+    {
+      name: 'Ellie',
+      age: 6,
+    },
+  ];
   const items = [{
     name: 'item1',
     start_date: '01/06/2023',
@@ -86,7 +105,11 @@ function App() {
           <Route path="/Phonebook" element={<Phonebook />} />
           <Route path="/Counter" element={<Counter />} />
           <Route path="/Component" element={<BasicComponent />} />
-          <Route path="/SearchbarComponent" element={<MySearchbar />} />
+          <Route path="/Searchbar" element={<MySearchbar />} />
+          <Route path="/DisplayBar" element={<Display />} />
+          <Route path="/ApiItemGrid" element={<ApiItemGrid />} />
+          <Route path="/Test1Component" element={<Test1Component data={data} />} />
+          <Route path="/Test2Component" element={<Test2Component props={data[0].name} />} />
         </Routes>
       </BrowserRouter>
     );

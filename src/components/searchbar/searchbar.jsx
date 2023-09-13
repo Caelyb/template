@@ -2,10 +2,17 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/react-in-jsx-scope */
+import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import ReactSearchBox from 'react-search-box';
 
 function MySearchbar() {
+  const [url, seturl] = useState('/Searchbar');
+  const handleOnSelect = (item) => {
+    // the item selected
+    console.log(item);
+    seturl(item);
+  };
   const data = [
     {
       key: 1,
@@ -55,7 +62,7 @@ function MySearchbar() {
         <ReactSearchBox
           placeholder="Search Here..."
           data={data}
-          onSelect={(record) => console.log(record)}
+          onSelect={(record) => handleOnSelect(record.item.url)}
           onFocus={() => {
             console.log('--- New Search ---');
           }}
@@ -65,7 +72,7 @@ function MySearchbar() {
           }}
           value=""
         />
-        <Button onClick={null}> Search </Button>
+        <Button href={url}> Go to Page </Button>
         <ul>
           {' '}
           Top Searches:
