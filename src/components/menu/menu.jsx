@@ -20,6 +20,8 @@ class Menu extends Component {
             <button className="menuButton" type="submit" formAction="/Counter"> Counter </button>
                 &nbsp;
             <button className="menuButton" type="submit" formAction="/Component"> Component Template </button>
+            &nbsp;
+            <button className="menuButton" type="submit" formAction="/Searchbar"> Searchbar </button>
           </form>
         </div>
 
